@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Ejecutivo - Auditoría de Ciberseguridad</title>
+    <!-- Tailwind CSS para estilos rápidos y modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para íconos profesionales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .accent-text { color: #4ade80; } /* Verde neón para resaltar */
+        .card { background-color: #1e293b; border-left: 4px solid #4ade80; }
+        .card-danger { border-left: 4px solid #ef4444; }
+        .card-warning { border-left: 4px solid #f59e0b; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <!-- Portada -->
+    <header class="max-w-5xl mx-auto mb-16 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wider"><span class="accent-text">Informe Ejecutivo</span> de Seguridad</h1>
+        <h2 class="text-2xl text-slate-400 mb-6">Auditoría de Ciberseguridad | Fase 1: Diagnóstico y Hardening</h2>
+        <div class="inline-block bg-slate-800 px-6 py-3 rounded-lg border border-slate-700">
+            <p class="text-lg"><strong>Auditor Líder:</strong> Teo Londero</p>
+            <p class="text-sm text-slate-400">Cliente: Empresa del Sector Inmobiliario (Anonimizado)</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto space-y-12">
+
+        <!-- Metodología -->
+        <section>
+            <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-microscope accent-text mr-2"></i>Metodología de Auditoría</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card p-6 rounded shadow-lg">
+                    <h4 class="text-xl font-bold mb-2">ISO 27001</h4>
+                    <p class="text-slate-300 text-sm">Evaluación basada en dominios de control (A.5 a A.18) para la gestión técnica y operativa.</p>
+                </div>
+                <div class="card p-6 rounded shadow-lg">
+                    <h4 class="text-xl font-bold mb-2">GDPR / Ley 25.326</h4>
+                    <p class="text-slate-300 text-sm">Análisis del ciclo de vida del dato personal (PII) y cumplimiento del deber de seguridad.</p>
+                </div>
+                <div class="card p-6 rounded shadow-lg">
+                    <h4 class="text-xl font-bold mb-2">NIST CSF</h4>
+                    <p class="text-slate-300 text-sm">Identificación de activos y diagnóstico de vulnerabilidades perimetrales.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eje 1: Infraestructura -->
+        <section>
+            <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-network-wired accent-text mr-2"></i>Eje 1: Infraestructura Blindada</h3>
+            <div class="bg-slate-800 p-6 rounded-lg mb-6">
+                <ul class="space-y-3 mb-6">
+                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Capa de Gestión:</strong> Migración total a HTTPS; cierre de Telnet/SSH/FTP.</li>
+                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Segmentación Lógica:</strong> Aislamiento de red administrativa de red de invitados (AP Isolation).</li>
+                    <li><i class="fa-solid fa-check text-green-400 mr-2"></i><strong>Defensa Wi-Fi:</strong> Despliegue de WPA3-SAE y desactivación de WPS/UPnP.</li>
+                </ul>
+                <div class="inline-block bg-green-900 text-green-300 px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-4">Estado: Riesgo Mitigado</div>
+                
+                <!-- Aquí se insertará tu diagrama de Lucidchart -->
+                <div class="mt-4 bg-slate-900 p-4 rounded border border-slate-700 text-center">
+                    <img src="../assets/diagrama_red.png" alt="Topología de Red Segura" class="max-w-full h-auto mx-auto rounded">
+                    <p class="text-sm text-slate-500 mt-2">Diagrama Topológico Lógico (Post-Hardening)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eje 2: Datos y Privacidad -->
+        <section>
+            <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-database accent-text mr-2"></i>Eje 2: Datos y Privacidad (Brechas Detectadas)</h3>
+            <div class="card-danger bg-slate-800 p-6 rounded-lg">
+                <div class="inline-block bg-red-900 text-red-300 px-3 py-1 rounded text-sm font-bold uppercase tracking-wider mb-6">Estado: Hallazgo Crítico</div>
+                <ul class="space-y-4">
+                    <li><i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i><strong>Exposición de PII:</strong> +200 documentos de identidad y solvencia en nube sin cifrado.</li>
+                    <li><i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i><strong>Conflictos de Propiedad:</strong> Terceros externos mantienen control de activos críticos.</li>
+                    <li><i class="fa-solid fa-triangle-exclamation text-red-400 mr-2"></i><strong>Endpoints Vulnerables:</strong> Terminales con Windows 7 fuera de soporte (End of Life) procesando datos críticos fuera del perímetro.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Eje 3 y Legal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <section>
+                <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-users-gear accent-text mr-2"></i>Eje 3: Cultura y Procesos</h3>
+                <div class="bg-slate-800 p-6 rounded-lg h-full">
+                    <h4 class="text-lg font-bold mb-4 text-orange-400">Obstáculos Operativos</h4>
+                    <ul class="list-disc list-inside space-y-2 text-sm text-slate-300 mb-6">
+                        <li>Falta de Sponsorship Directivo.</li>
+                        <li>Resistencia al uso de MFA y Password Managers.</li>
+                        <li>Denegación de recursos para backups.</li>
+                    </ul>
+                    <h4 class="text-lg font-bold mb-2 text-red-400">Consecuencia Técnica</h4>
+                    <p class="text-sm text-slate-300">La remediación quedó limitada a la capa física. La capa de datos permanece en vulnerabilidad alta por falta de adopción humana.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-scale-balanced accent-text mr-2"></i>Marco Legal</h3>
+                <div class="card-warning bg-slate-800 p-6 rounded-lg h-full flex flex-col justify-center">
+                    <h4 class="text-xl font-bold mb-2">Ley 25.326 (Habeas Data)</h4>
+                    <p class="text-sm text-slate-300 mb-4">El responsable del tratamiento de datos debe adoptar medidas técnicas que garanticen la integridad y seguridad de los archivos.</p>
+                    <blockquote class="italic text-slate-400 border-l-2 border-slate-600 pl-4">
+                        "La dirección ha sido notificada. Al no habilitar la Fase de Remediación, la organización asume formalmente el <strong class="text-white">Riesgo Aceptado</strong> y la responsabilidad legal ante incidentes."
+                    </blockquote>
+                </div>
+            </section>
+        </div>
+
+        <!-- Roadmap -->
+        <section>
+            <h3 class="text-2xl font-bold border-b border-slate-700 pb-2 mb-6"><i class="fa-solid fa-route accent-text mr-2"></i>Roadmap Recomendado: Fase 2</h3>
+            <div class="bg-slate-800 p-6 rounded-lg">
+                <ol class="list-decimal list-inside space-y-4 text-lg">
+                    <li><strong class="text-white">Continuidad:</strong> Implementar Backup 3-2-1 local y nube.</li>
+                    <li><strong class="text-white">Higiene:</strong> Capacitación en gestión de contraseñas (IAM / MFA).</li>
+                    <li><strong class="text-white">Hardening:</strong> Migración de sistemas Windows 7 y cifrado de disco (BitLocker).</li>
+                </ol>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-5xl mx-auto mt-16 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm pb-8">
+        <p>Documento generado como Audit Trail. Elaborado por Teo Londero.</p>
+    </footer>
+
+</body>
+</html>
